@@ -35,10 +35,11 @@ def run(inp, i=0):
 #    for p in range(100):
 #        inp[2] = p
 inp = originp
-inp[1] = 12
-inp[2] = 2
-print(run(inp))
-
-#        if inp[0] == 19690720:
-#            print(100 * inp[1] + inp[2])
-#            sys.exit()
+for i in range(99):
+    inp[1] = i
+    for p in range(99):    
+        inp[2] = 2
+        run(inp)
+        if inp[0] == 19690720:
+            print(100 * inp[1] + inp[2])
+            sys.exit()
