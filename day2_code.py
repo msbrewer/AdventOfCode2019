@@ -22,11 +22,12 @@ def output(inpList):
         return op2(inpList[1], inpList[2])
 
 def run(inp, i=0):
-    inpList = [inp[i], inp[i+1], inp[i+2], inp[i+3]]
-    inp[inpList[3]] = output(inpList)
-    i = i + 4
-    if inp[i] == 99:
-        return inp
+    while True:
+        inpList = [inp[i], inp[i+1], inp[i+2], inp[i+3]]
+        inp[inpList[3]] = output(inpList)
+        i = i + 4
+        if inp[i] == 99:
+            return inp
 
 #for i in range(100):
 #    inp = originp
@@ -36,8 +37,7 @@ def run(inp, i=0):
 inp = originp
 inp[1] = 12
 inp[2] = 2
-while True:
-    print(run(inp))
+print(run(inp))
 
 #        if inp[0] == 19690720:
 #            print(100 * inp[1] + inp[2])
