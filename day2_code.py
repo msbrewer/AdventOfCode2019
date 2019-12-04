@@ -31,10 +31,10 @@ def run(inp, i=0):
 
 inp = originp.copy()
 for i in range(99):
-    inp = originp.copy()
     for p in range(99):    
+        inp = originp.copy()
         inp[1] = i
-        inp[2] = 2
+        inp[2] = p
         run(inp)
         if inp[0] == 19690720:
             print(100 * inp[1] + inp[2])
