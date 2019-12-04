@@ -29,15 +29,11 @@ def run(inp, i=0):
         if inp[i] == 99:
             return inp
 
-#for i in range(100):
-#    inp = originp
-#    inp[1] = i
-#    for p in range(100):
-#        inp[2] = p
-inp = originp
+inp = originp.copy()
 for i in range(99):
-    inp[1] = i
+    inp = originp.copy()
     for p in range(99):    
+        inp[1] = i
         inp[2] = 2
         run(inp)
         if inp[0] == 19690720:
